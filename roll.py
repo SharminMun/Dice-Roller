@@ -5,3 +5,14 @@
 # roll 3 - produce three numbers and print them.
 #
 
+import random
+
+def dice_roll(numOftimes):
+    playAgain = "Y"
+    while playAgain == "Y":
+        for dice in range(1, numOftimes+1):  
+            print(random.randint(1,6))
+        print("Would you like to roll the dice again?")
+        playAgain = input("Please enter Y for Yes, or Type anything else to quit the game:")
+
+dice_roll(3)
